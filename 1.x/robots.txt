@@ -1,0 +1,36 @@
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: baiduspider
+Disallow: /
+
+User-agent: *
+Allow: /googlefed51c74bc944f0f.html
+Disallow: /beta
+Disallow: /index_files
+Disallow: /itunes
+Disallow: /js
+Disallow: /css
+Disallow: /cv
+Disallow: /fuckyunpian
+Disallow: /404_files
+Disallow: /404.html
+Disallow: /ua
+Disallow: /ie6
+Disallow: /img2base64
+Disallow: /mars
+Disallow: /hackertyper
+Disallow: /huangli
+Disallow: /fontize
+Disallow: /img2txt
+Disallow: /coverflow
+Disallow: /googlefed51c74bc944f0f.html
+Disallow: /FlowerPower
+Disallow: /md
+Disallow: /resume
+Disallow: /deai
+Disallow: /old404
+Disallow: /signature
+Disallow: /tracker
+Disallow: /software
+
