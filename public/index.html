@@ -104,8 +104,8 @@
                 });
               </script>
         </div><br>
-        <div id='map' style='height:380px;' />
-        <!--<script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZeU2BLWXsli47Dy8ELkMUNBQBK3Yg2Zk"></script>-->
+        <!--<div id='map' style='height:380px;' />
+        <script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZeU2BLWXsli47Dy8ELkMUNBQBK3Yg2Zk"></script>
         <script src="https://maps.google.cn/maps/api/js?key=AIzaSyDZeU2BLWXsli47Dy8ELkMUNBQBK3Yg2Zk&language=en" type="text/javascript"></script>
         <script>
           var map = new google.maps.Map(document.getElementById('map'), {
@@ -124,6 +124,25 @@
           });
 
           map.overlayMapTypes.insertAt(0, waqiMapOverlay);
+        </script>-->
+        <div id='map' style='height:380px;' />
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+        <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+        <script>
+          var OSM_URL = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+          var OSM_ATTRIB = '&copy;  <a  href="http://openstreetmap.org/copyright">OpenStreetMap</a>  contributors';
+          var osmLayer = L.tileLayer(OSM_URL, {
+            attribution: OSM_ATTRIB
+          });
+
+          var WAQI_URL = "http://tiles.aqicn.org/tiles/usepa-aqi/{z}/{x}/{y}.png?token=_TOKEN_ID_";
+          var WAQI_ATTR = 'Air  Quality  Tiles  &copy;  <a  href="http://waqi.info">waqi.info</a>';
+          var waqiLayer = L.tileLayer(WAQI_URL, {
+            attribution: WAQI_ATTR
+          });
+
+          var map = L.map('map').setView([31.212, 121.46], 11);
+          map.addLayer(osmLayer).addLayer(waqiLayer);
         </script>
         <center>
     </section>
@@ -136,16 +155,18 @@
       <div class="paginator"><a href="http://sh.ky0n.xyz/" target="_self">AQI</a> -
         <a href="https://sh.ky0n.xyz/weather" target="_self">Weather</a> -
         <a href="http://sh.ky0n.xyz/sunnyclock" target="_self">SunnyClock</a> -
-        <a href="http://sh.ky0n.xyz/map" target="_blank">Map</a> -
         <a href="https://ky0n.xyz" target="_self">Blog</a> -
         <a href="https://sh.ky0n.xyz/about/" target="_self">About</a></div>
-      <div class="copyright">
-        <!--- var currentDate = new Date();
+      <center><a>AQI Map</a> with <a href="http://sh.ky0n.xyz/map/gm" target="_blank">Google</a> / <a href="http://sh.ky0n.xyz/map/osm"
+          target="_blank">Openstreetmap</a>
+        <center>
+          <div class="copyright">
+            <!--- var currentDate = new Date();
 - var year = currentDate.getFullYear();
 - year = year == theme.startyear ? year : theme.startyear + ' - ' + year;
 p ©  <a href="https://ky0n.xyz">ky0ncheng</a>, unless otherwise noted.
  --><br>Hello from Shanghai<br>
-        <hr>This site is licensed under<br><a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a></div>
+            <hr>This site is licensed under<br><a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a></div>
     </footer>
   </div>
   <script async src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
