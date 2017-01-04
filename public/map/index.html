@@ -45,40 +45,43 @@
 
     map.overlayMapTypes.insertAt(0, waqiMapOverlay);
   </script>-->
-   <div id='map' style='height:100%;width:100%' />
-        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
-        <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
-        <script>
-          var OSM_URL = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-          var OSM_ATTRIB = '&copy;  <a  href="http://openstreetmap.org/copyright">OpenStreetMap</a>  contributors';
-          var osmLayer = L.tileLayer(OSM_URL, {
-            attribution: OSM_ATTRIB
-          });
-
-          var WAQI_URL = "http://tiles.aqicn.org/tiles/usepa-aqi/{z}/{x}/{y}.png?token=_TOKEN_ID_";
-          var WAQI_ATTR = 'Air  Quality  Tiles  &copy;  <a  href="http://waqi.info">waqi.info</a>';
-          var waqiLayer = L.tileLayer(WAQI_URL, {
-            attribution: WAQI_ATTR
-          });
-
-          var map = L.map('map').setView([31.212, 121.46], 11);
-          map.addLayer(osmLayer).addLayer(waqiLayer);
-        </script>
+  <div id='map' style='height:100%;width:100%' />
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
   <script>
-    (function (b, o, i, l, e, r) {
-      b.GoogleAnalyticsObject = l;
-      b[l] || (b[l] = function () {
-        (b[l].q = b[l].q || []).push(arguments)
-      });
-      b[l].l = +new Date;
-      e = o.createElement(i);
-      r = o.getElementsByTagName(i)[0];
-      e.src = '//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e, r)
-    }(window, document, 'script', 'ga'));
-    ga('create', "UA-70500040-1", 'auto');
-    ga('send', 'pageview');
+    var OSM_URL = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    var OSM_ATTRIB = '&copy; <a  href="http://openstreetmap.org/copyright">OpenStreetMap</a>';
+    var osmLayer = L.tileLayer(OSM_URL, {
+      attribution: OSM_ATTRIB
+    });
+
+    var WAQI_URL =
+      "http://tiles.aqicn.org/tiles/usepa-aqi/{z}/{x}/{y}.png?token=d7031fe0ef3a532d9d9c7f70507fe8a4ce4c4c3b";
+    var WAQI_ATTR = '<a  href="https://aqicn.org">AQICN</a>';
+    var waqiLayer = L.tileLayer(WAQI_URL, {
+      attribution: WAQI_ATTR
+    });
+
+    var map = L.map('map').setView([31.212, 121.46], 11);
+    map.addLayer(osmLayer).addLayer(waqiLayer);
   </script>
+  </div>
+  <center>
+    <script>
+      (function (b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] = function () {
+          (b[l].q = b[l].q || []).push(arguments)
+        });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = '//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+      }(window, document, 'script', 'ga'));
+      ga('create', "UA-70500040-1", 'auto');
+      ga('send', 'pageview');
+    </script>
 </body>
 
 </html>
