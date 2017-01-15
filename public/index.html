@@ -126,11 +126,12 @@
           map.overlayMapTypes.insertAt(0, waqiMapOverlay);
         </script>-->
         <div id='map' style='height:380px;' />
-        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
-        <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+        <link rel="stylesheet" href="https://ojtqui99j.qnssl.com/leaflet.css" />
+        <script src="https://ojtqui99j.qnssl.com/leaflet.js"></script>
         <script>
-          var OSM_URL = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-          var OSM_ATTRIB = '&copy; <a  href="http://openstreetmap.org/copyright">OpenStreetMap</a>';
+          /*var OSM_URL = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';*/
+          var OSM_URL = 'https://api.mapbox.com/styles/v1/ky0ncheng/cixypfwh800272smnurrvelvk/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia3kwbmNoZW5nIiwiYSI6ImNpeHlwZWR4MTAwNmIyd3J5MjF5Y3IxNmsifQ.2bQp18BgD_MwkSLxJWPUbQ';
+          var OSM_ATTRIB = '&copy; <a  href="https://mapbox.com">Mapbox</a>';
           var osmLayer = L.tileLayer(OSM_URL, {
             attribution: OSM_ATTRIB
           });
@@ -159,8 +160,8 @@
         <a href="http://sh.ky0n.xyz/sunnyclock" target="_self">SunnyClock</a> -
         <a href="https://ky0n.xyz" target="_self">Blog</a> -
         <a href="https://sh.ky0n.xyz/about/" target="_self">About</a></div>
-      <center><a>AQI Map</a> with <a href="http://sh.ky0n.xyz/map/gm" target="_blank">Google</a> / <a href="http://sh.ky0n.xyz/map/osm"
-          target="_blank">Openstreetmap</a>
+      <center><a>AQI Map</a> with <a href="http://sh.ky0n.xyz/map/gm" target="_blank">Google</a> /
+        <a href="http://sh.ky0n.xyz/map/mapbox" target="_blank">Mapbox</a> / <a href="http://sh.ky0n.xyz/map/osm" target="_blank">Openstreetmap</a>
         <center>
           <div class="copyright">
             <!--- var currentDate = new Date();
