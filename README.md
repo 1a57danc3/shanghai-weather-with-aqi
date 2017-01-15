@@ -3,18 +3,19 @@
 -----
 
 [![](https://ww2.sinaimg.cn/large/6d9bd6a5gw1fbakcy1mufj20l50hbwpe.jpg)](http://sh.ky0n.xyz/map)
-<div align="right"> <sup>上海空氣污染情況</sup></div>
+<div align="right"> <sup>上海天氣及空氣污染情況地圖</sup></div>
 
-之前一直關注的是 Twitter 上面 [美帝上海領館](https://twitter.com/CGShanghaiAir) 的空氣檢測數據
+Data Sources & API
 
-覺得不是很方便，畢竟只是一條 Tweet ，於是用了 aqicn 的 api 做了一個 [頁面](http://sh.ky0n.xyz/) 方便查看。
+[Weather Underground](https://www.wunderground.com)  
+[Forecast](https://forecast.io)  
+[World Air Quality Index](https://aqicn.org)  
+[U.S. Consulate Shanghai Air Quality Monitor](http://shanghai.usembassy-china.org.cn/airmonitor.html)  
+[Shanghai Astronomical Observatory](http://ftp.astron.ac.cn/index.php?lang=en)  
+[Thinkpage](https://www.thinkpage.cn/)  
+[Mapbox API with leaflet.js](http://leafletjs.com/reference.html#tilelayer)  
+[Air Quality Widget - New Improved Feed](https://aqicn.org/faq/2015-07-28/air-quality-widget-new-improved-feed/)  
+[Map Web Service: Real-time Air Quality Tile API](https://aqicn.org/faq/2015-09-18/map-web-service-real-time-air-quality-tile-api/)  
+[Air Pollution in City average: Real-time Air Quality Index Visual Map](https://aqicn.org/map/shanghai/quanshipingjun/)
 
-覺得好用的可以將 http://sh.ky0n.xyz 收藏爲書籤。
-
-天氣主要數據來自 [Forecast](https://forecast.io/)
-
-空氣質量指數來自 [Aqicn](https://aqicn.org) / [U.S. Consulate Shanghai Air Quality Monitor](http://shanghai.usembassy-china.org.cn/airmonitor.html)
-
-災害天氣預警來自 [Thinkpage](https://www.thinkpage.cn/)
-
-更多詳情請見：https://sh.ky0n.xyz/about
+This project is licensed under Creative Commons BY-NC-SA 4.0

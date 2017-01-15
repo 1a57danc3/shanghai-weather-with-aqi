@@ -49,8 +49,9 @@
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
   <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
   <script>
-    var OSM_URL = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-    var OSM_ATTRIB = '&copy; <a  href="http://openstreetmap.org/copyright">OpenStreetMap</a>';
+    var OSM_URL =
+      'https://api.mapbox.com/styles/v1/ky0ncheng/cixypfwh800272smnurrvelvk/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia3kwbmNoZW5nIiwiYSI6ImNpeHlwZWR4MTAwNmIyd3J5MjF5Y3IxNmsifQ.2bQp18BgD_MwkSLxJWPUbQ';
+    var OSM_ATTRIB = '&copy; <a  href="https://mapbox.com">Mapbox</a>';
     var osmLayer = L.tileLayer(OSM_URL, {
       attribution: OSM_ATTRIB
     });
