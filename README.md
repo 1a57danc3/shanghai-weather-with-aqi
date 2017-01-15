@@ -17,5 +17,3 @@ Data Sources & API
 [Air Quality Widget - New Improved Feed](https://aqicn.org/faq/2015-07-28/air-quality-widget-new-improved-feed/)  
 [Map Web Service: Real-time Air Quality Tile API](https://aqicn.org/faq/2015-09-18/map-web-service-real-time-air-quality-tile-api/)  
 [Air Pollution in City average: Real-time Air Quality Index Visual Map](https://aqicn.org/map/shanghai/quanshipingjun/)
-
-This project is licensed under Creative Commons BY-NC-SA 4.0
