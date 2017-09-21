@@ -10,16 +10,18 @@
   <meta name="anthor" content="ky0ncheng">
   <meta name="theme-color" content="#000000">
   <meta name="google" content="notranslate">
-  <link rel="short icon" href="/favicon.png">
-  <link rel="stylesheet" href="https://o3ziuzht9.qnssl.com/apollo.css">
+  <link rel="shortcut icon" href="https://ky0n.xyz/css/logo/favicon-96x96.png" type="image/png" />
+  <link rel="icon" sizes="192x192" href="https://ky0n.xyz/css/logo/favicon-192x192.png" />
+  <script src="https://o3ziuzht9.qnssl.com/console.js"></script>
+  <link rel="stylesheet" href="https://sh.ky0n.xyz/css/apollo.css">
   <link rel="stylesheet" href="https://fonts.proxy.ustclug.org/css?family=Source+Sans+Pro:400,600" type="text/css">
-  <!--<script>
+  <script>
     var url = window.location.href;
     if (url.indexOf("https") < 0) {
       url = url.replace("http:", "https:");
       window.location.replace(url);
     }
-  </script>-->
+  </script>
 </head>
 
 <body>
@@ -50,33 +52,33 @@
                     margin: 0;
                     border: 1px solid black
                   }
-                  
+
                   table.infoaqitable td {
                     padding: 5px;
                     font-size: 15px;
                     text-shadow: none
                   }
-                  
+
                   .aqiwtxt {
                     color: #fff
                   }
-                  
+
                   .aqibtxt {
                     color: #fff
                   }
-                  
+
                   @media only screen and (max-width:800px) {
                     table.infoaqitable {
                       width: 98%
                     }
                   }
-                  
+
                   @media only screen and (max-width:420px) {
                     table.infoaqitable td:first-child {
                       font-size: 12px
                     }
                   }
-                  
+
                   @media only screen and (max-width:420px) {
                     table.infoaqitable td:first-child {
                       font-size: 10px
@@ -163,11 +165,10 @@
           <a href=http://leafletjs.com/reference.html#tilelayer target="_blank">Mapbox API with leaflet.js</a><br>
           <a href=https://aqicn.org/faq/2015-07-28/air-quality-widget-new-improved-feed/ target="_blank">Air Quality Widget - New Improved Feed</a><br>
           <a href=https://aqicn.org/faq/2015-09-18/map-web-service-real-time-air-quality-tile-api/ target="_blank">Map Web Service: Real-time Air Quality Tile API</a><br>
-          <a href=https://aqicn.org/map/shanghai/quanshipingjun/ target="_blank">Air Pollution in City average: Real-time Air Quality Index Visual Map
-</a><br>
+          <a href=https://aqicn.org/map/shanghai/quanshipingjun/ target="_blank">Air Pollution in City average: Real-time Air Quality Index Visual Map</a><br>
+          <a href=https://windtv.com target="_blank">Windtv</a><br>
           <br>This site use UK weather temperture format unit and AQI calculated with the US EPA standard.
           <br>
-          <br>Opensource project on <a href=https://github.com/ky0ncheng/shanghai-weather-with-aqi>Github</a>.<br>
         </div>
         <center>
     </section>
@@ -177,13 +178,14 @@
           border-top: 1px solid #ffffff;
         }
       </style>
-      <div class="paginator"><a href="http://sh.ky0n.xyz/" target="_self">AQI</a> -
+      <div class="paginator"><a href="https://sh.ky0n.xyz/" target="_self">AQI</a> -
         <a href="https://sh.ky0n.xyz/weather" target="_self">Weather</a> -
-        <a href="http://sh.ky0n.xyz/sunnyclock" target="_self">SunnyClock</a> -
+        <a href="https://sh.ky0n.xyz/sunnyclock" target="_self">SunnyClock</a> -
+        <a href="http://www.hko.gov.hk/wxinfo/currwx/tc_gis_e.htm" target="_blank">Cyclone</a> -
         <a href="https://ky0n.xyz" target="_self">Blog</a> -
         <a href="https://sh.ky0n.xyz/about/" target="_self">About</a></div>
-      <center><a>AQI Map</a> with <a href="http://sh.ky0n.xyz/map/gm" target="_blank">Google</a> / <a href="http://sh.ky0n.xyz/map/osm"
-          target="_blank">Openstreetmap</a>
+      <center><a>AQI Map</a> with <a href="https://sh.ky0n.xyz/map/gm" target="_blank">Google</a> /
+        <a href="https://sh.ky0n.xyz/map/mapbox" target="_blank">Mapbox</a> / <a href="https://sh.ky0n.xyz/map/osm" target="_blank">Openstreetmap</a>
         <center>
           <div class="copyright">
             <!--- var currentDate = new Date();
@@ -191,23 +193,98 @@
 - year = year == theme.startyear ? year : theme.startyear + ' - ' + year;
 p ©  <a href="https://ky0n.xyz">ky0ncheng</a>, unless otherwise noted.
  --><br>Hello from Shanghai<br>
-            <hr>This site is licensed under<br><a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a></div>
+            <div>
+              <span id="localutc"></span> <span id="LAX"></span> <span id="PVG"></span> <span id="JFK"></span>
+            </div>
+            <br>Opensource on <a href=https://github.com/weathersh/weathersh.github.io>Github</a></div>
+          <script language="javascript" type="text/javascript">
+            function calcTime(x, w) {
+              var s = new Date();
+              utc = s.getTime() + (s.getTimezoneOffset() * 60000);
+              var v = new Date(utc + (3600000 * w));
+              var d = new Date(utc);
+              var p = v.getDate();
+              var t = v.getMonth();
+              var r = v.getYear();
+              var o = v.getHours();
+              var y = v.getMinutes();
+              var u = v.getSeconds();
+              if (r < 1000) {
+                r += 1900
+              }
+              var z = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September",
+                "October", "November", "December");
+              var q = new Array("31", "28", "31", "30", "31", "30", "31", "31", "30", "31", "30", "31");
+              if (r % 4 == 0) {
+                q = new Array("31", "29", "31", "30", "31", "30", "31", "31", "30", "31", "30", "31")
+              }
+              if (r % 100 == 0 && r % 400 != 0) {
+                q = new Array("31", "28", "31", "30", "31", "30", "31", "31", "30", "31", "30", "31")
+              }
+              if (o >= 24) {
+                o = o - 24;
+                p -= -1
+              }
+              if (o < 0) {
+                o -= -24;
+                p -= 1
+              }
+              if (o < 10) {
+                o = " " + o
+              }
+              if (y < 10) {
+                y = "0" + y
+              }
+              if (u < 10) {
+                u = "0" + u
+              }
+              if (p <= 0) {
+                if (t == 0) {
+                  t = 11;
+                  r -= 1
+                } else {
+                  t = t - 1
+                }
+                p = q[t]
+              }
+              if (p > q[t]) {
+                p = 1;
+                if (t == 11) {
+                  t = 0;
+                  r -= -1
+                } else {
+                  t -= -1
+                }
+              }
+              return x + o + ":" + y
+            }
+
+            function worldClockZone() {
+              document.getElementById("localutc").innerHTML = calcTime("LHR ", "+1");
+              document.getElementById("LAX").innerHTML = calcTime("LAX ", "-7");
+              document.getElementById("PVG").innerHTML = calcTime("PVG ", "+8");
+              document.getElementById("JFK").innerHTML = calcTime("JFK ", "-4");
+              setTimeout("worldClockZone()", 1000)
+            }
+            window.onload = worldClockZone;
+          </script>
     </footer>
   </div>
   <script async src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
   <script>
-    (function (b, o, i, l, e, r) {
-      b.GoogleAnalyticsObject = l;
-      b[l] || (b[l] = function () {
-        (b[l].q = b[l].q || []).push(arguments)
-      });
-      b[l].l = +new Date;
-      e = o.createElement(i);
-      r = o.getElementsByTagName(i)[0];
-      e.src = '//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e, r)
-    }(window, document, 'script', 'ga'));
-    ga('create', "UA-70500040-1", 'auto');
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-70500040-5', 'auto');
     ga('send', 'pageview');
   </script>
 </body>

@@ -11,16 +11,17 @@
   <meta name="theme-color" content="#000000">
   <meta name="google" content="notranslate">
   <!--<meta http-equiv="refresh" content="60;url=https://sh.ky0n.xyz/map">-->
-  <link rel="short icon" href="/favicon.png">
-  <link rel="stylesheet" href="https://o3ziuzht9.qnssl.com/apollo.css">
+  <link rel="shortcut icon" href="https://ky0n.xyz/css/logo/favicon-96x96.png" type="image/png" />
+  <link rel="icon" sizes="192x192" href="https://ky0n.xyz/css/logo/favicon-192x192.png" />
+  <link rel="stylesheet" href="https://sh.ky0n.xyz/css/apollo.css">
   <link rel="stylesheet" href="https://fonts.proxy.ustclug.org/css?family=Source+Sans+Pro:400,600" type="text/css">
-  <!--<script>
+  <script>
     var url = window.location.href;
     if (url.indexOf("https") < 0) {
       url = url.replace("http:", "https:");
       window.location.replace(url);
     }
-  </script>-->
+  </script>
 </head>
 
 <body>
@@ -37,7 +38,7 @@
     var t = new Date().getTime();
     var waqiMapOverlay = new google.maps.ImageMapType({
       getTileUrl: function (coord, zoom) {
-        return 'http://tiles.aqicn.org/tiles/usepa-aqi/' + zoom + "/" + coord.x + "/" + coord.y +
+        return 'https://tiles.aqicn.org/tiles/usepa-aqi/' + zoom + "/" + coord.x + "/" + coord.y +
           ".png?token=d7031fe0ef3a532d9d9c7f70507fe8a4ce4c4c3b";
       },
       name: "Air  Quality",
@@ -46,17 +47,17 @@
     map.overlayMapTypes.insertAt(0, waqiMapOverlay);
   </script>-->
   <div id='map' style='height:100%;width:100%' />
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
-  <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@0.7.7/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@0.7.7/dist/leaflet.js"></script>
   <script>
-    var OSM_URL = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    var OSM_URL = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
     var OSM_ATTRIB = '&copy; <a  href="http://openstreetmap.org/copyright">OpenStreetMap</a>';
     var osmLayer = L.tileLayer(OSM_URL, {
       attribution: OSM_ATTRIB
     });
 
     var WAQI_URL =
-      "http://tiles.aqicn.org/tiles/usepa-aqi/{z}/{x}/{y}.png?token=d7031fe0ef3a532d9d9c7f70507fe8a4ce4c4c3b";
+      "https://tiles.aqicn.org/tiles/usepa-aqi/{z}/{x}/{y}.png?token=d7031fe0ef3a532d9d9c7f70507fe8a4ce4c4c3b";
     var WAQI_ATTR = '<a  href="https://aqicn.org">AQICN</a>';
     var waqiLayer = L.tileLayer(WAQI_URL, {
       attribution: WAQI_ATTR
@@ -68,20 +69,15 @@
   </div>
   <center>
     <script>
-      (function (b, o, i, l, e, r) {
-        b.GoogleAnalyticsObject = l;
-        b[l] || (b[l] = function () {
-          (b[l].q = b[l].q || []).push(arguments)
-        });
-        b[l].l = +new Date;
-        e = o.createElement(i);
-        r = o.getElementsByTagName(i)[0];
-        e.src = '//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e, r)
-      }(window, document, 'script', 'ga'));
-      ga('create', "UA-70500040-1", 'auto');
-      ga('send', 'pageview');
-    </script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-70500040-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 
 </html>
