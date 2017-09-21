@@ -1,6 +1,4 @@
-#上海天氣情況及空氣質量指數
-
------
+上海天氣情況及空氣質量指數
 
 [![](https://ww2.sinaimg.cn/large/6d9bd6a5gw1fbakcy1mufj20l50hbwpe.jpg)]
 
