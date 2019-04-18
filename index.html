@@ -18,8 +18,8 @@
     }
   </script>
   <!--<meta http-equiv="refresh" content="60;url=https://sh.ky0n.xyz">-->
-  <link rel="shortcut icon" href="https://ky0n.xyz/css/logo/favicon-96x96.png" type="image/png" />
-  <link rel="icon" sizes="192x192" href="https://ky0n.xyz/css/logo/favicon-192x192.png" />
+  <link rel="shortcut icon" href="https://ky0n.xyz/favicon-192.png" type="image/png" />
+  <link rel="icon" sizes="192x192" href="https://ky0n.xyz/favicon-192.png" />
   <link rel="stylesheet" href="https://sh.ky0n.xyz/css/apollo.css">
   <link rel="stylesheet" href="https://fonts.proxy.ustclug.org/css?family=Source+Sans+Pro:400,600" type="text/css">
 
@@ -72,7 +72,7 @@
                 } else {
                   T.addEventListener("load", g, false)
                 }
-              }(window, document, "script", "tpwidget", "//widget.thinkpage.cn/widget/chameleon.js"))
+              }(window, document, "script", "tpwidget", "//widget.seniverse.com/widget/chameleon.js"))
             </script>
             <script>
               tpwidget("init", {
@@ -100,13 +100,14 @@
                     s['n'] = n = n || 0;
                     L = d.createElement(t), e = d.getElementsByTagName(t)[0];
                     L.async = 1;
-                    L.src = '//aqi.railsboys.org/feed/' + (c[n].city) + '/' + (c[n].lang || '') + 'feed.v1.js?n=' +
+                    L.src = '//aqi.ky0n.xyz/feed/' + (c[n].city) + '/' + (c[n].lang || '') + 'feed.v1.js?n=' +
                       n +
                       k;
                     e.parentNode.insertBefore(L, e);
                   };
                 })(window, document, 'script', '_aqiFeed');
-              </script><br>
+              </script>
+              <br>
               <span id="city-aqi-container"></span>
               <script type="text/javascript" charset="utf-8">
                 _aqiFeed({
@@ -115,9 +116,10 @@
                   city: "shanghai/us-consulate"
                 });
               </script>
-        </div><br>
+              
+        </div>
+        <br>
         <center>
-          <h4>AQI Map</h4>
           <center>
             <div id='map' style='height:500px;' />
             <link rel="stylesheet" href="https://unpkg.com/leaflet@0.7.7/dist/leaflet.css" />
@@ -151,26 +153,40 @@
           border-top: 1px solid #ffffff;
         }
       </style>
-      <div class="paginator"><a href="https://sh.ky0n.xyz/" target="_self">AQI</a> -
+      <div class="paginator">
+        <a href="https://sh.ky0n.xyz/" target="_self">AQI</a> -
         <a href="https://sh.ky0n.xyz/weather" target="_self">Weather</a> -
         <a href="https://sh.ky0n.xyz/sunnyclock" target="_self">SunnyClock</a> -
         <a href="http://www.hko.gov.hk/wxinfo/currwx/tc_gis_e.htm" target="_blank">Cyclone</a> -
         <a href="https://ky0n.xyz" target="_self">Blog</a> -
-        <a href="https://sh.ky0n.xyz/about/" target="_self">About</a></div>
-      <center><a>AQI Map</a> with <a href="https://sh.ky0n.xyz/map/gm" target="_blank">Google</a> /
-        <a href="https://sh.ky0n.xyz/map/mapbox" target="_blank">Mapbox</a> / <a href="https://sh.ky0n.xyz/map/osm" target="_blank">Openstreetmap</a>
+        <a href="https://sh.ky0n.xyz/about/" target="_self">About</a>
+        <br>
+        <br>
+        <a href="https://t.me/WeatherAlertShanghai" target="_blank">>>>Telegram@WeatherAlertShanghai
+          <<<</a>
+      </div>
+      <center>
+        <a>AQI Map</a> with
+        <a href="https://sh.ky0n.xyz/map/gm" target="_blank">Google</a> /
+        <a href="https://sh.ky0n.xyz/map/mapbox" target="_blank">Mapbox</a> /
+        <a href="https://sh.ky0n.xyz/map/osm" target="_blank">Openstreetmap</a>
         <center>
           <div class="copyright">
             <!--- var currentDate = new Date();
 - var year = currentDate.getFullYear();
 - year = year == theme.startyear ? year : theme.startyear + ' - ' + year;
 p ©  <a href="https://ky0n.xyz">ky0ncheng</a>, unless otherwise noted.
- --><br>
-            <p>Hello from Shanghai </p>
+ -->
+            <p></p>
             <div>
-              <span id="localutc"></span> <span id="LAX"></span> <span id="PVG"></span> <span id="JFK"></span>
+              <span id="localutc"></span>
+              <span id="LAX"></span>
+              <span id="PVG"></span>
+              <span id="JFK"></span>
             </div>
-            <br>Opensource on <a href=https://github.com/ky0ncheng/shanghai-weather-with-aqi>Github</a></div>
+            <br>Opensource on
+            <a href=https://github.com/ky0ncheng/shanghai-weather-with-aqi>Github</a>
+          </div>
           <script language="javascript" type="text/javascript">
             function calcTime(x, w) {
               var s = new Date();
